@@ -276,6 +276,22 @@ body{
   color: var(--muted);
 }
 
+/* Code project placeholder (for text-based / C++ projects) */
+.code-placeholder{
+  height: 260px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
 /* Responsive */
 @media (max-width: 900px){
   .section-title{
