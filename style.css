@@ -1,82 +1,88 @@
 :root{
-  --bg: #ece7dd;
-  --text: #1f2937;
-  --muted: rgba(31,41,55,.7);
-  --card: rgba(255,255,255,.45);
-  --border: rgba(31,41,55,.15);
+  --bg: #e9e6df;
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, .72);
+  --card: rgba(255,255,255,.42);
+  --border: rgba(15, 23, 42, .12);
+  --shadow: 0 12px 30px rgba(15, 23, 42, .08);
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
 
 body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-/* Top bar */
+/* Topbar */
 .topbar{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(233,230,223,.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo{
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 700;
+  letter-spacing: .2px;
   text-decoration: none;
+  color: var(--text);
 }
 
 .nav{
   display: flex;
   gap: 18px;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .nav a{
-  color: var(--muted);
   text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
 }
 
 .nav a:hover{
   color: var(--text);
-  border-bottom-color: var(--text);
+  border-bottom-color: var(--border);
 }
 
-/* Layout */
+/* Layout container */
 .container{
-  max-width: 1100px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 0 20px 60px;
+  padding: 42px 24px 70px;
 }
 
 /* Hero */
 .hero{
-  padding: 80px 0 40px;
-  max-width: 820px;
+  padding-top: 38px;
 }
 
 .hero h1{
   font-family: ui-serif, Georgia, "Times New Roman", serif;
-  font-size: clamp(42px, 5vw, 62px);
-  margin-bottom: 18px;
-  letter-spacing: -0.6px;
+  font-size: clamp(44px, 5.2vw, 68px);
+  margin: 0 0 18px;
+  letter-spacing: -0.8px;
 }
 
 .subhead{
   font-size: 18px;
   color: var(--muted);
-  margin-bottom: 18px;
+  margin: 0 0 18px;
+  max-width: 68ch;
 }
 
 .subhead strong{
@@ -86,11 +92,12 @@ body{
 .meta{
   font-size: 14px;
   color: var(--muted);
+  margin: 0;
 }
 
 .meta span{
   color: var(--text);
-  opacity: .8;
+  opacity: .82;
 }
 
 /* Section titles */
@@ -99,20 +106,22 @@ body{
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  margin: 44px 0 18px;
+  margin: 52px 0 18px;
 }
 
 .section-title h2{
   font-size: 18px;
   letter-spacing: .2px;
+  margin: 0;
 }
 
 .section-title p{
   font-size: 14px;
   color: var(--muted);
+  margin: 0;
 }
 
-/* Featured projects */
+/* Featured blocks */
 .feature{
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -134,8 +143,9 @@ body{
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 18px;
-  padding: 26px;
+  padding: 18px;
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .feature-media img{
@@ -145,11 +155,11 @@ body{
   border-radius: 12px;
 }
 
-/* Text side */
+/* Text */
 .feature-body h3{
   font-family: ui-serif, Georgia, serif;
   font-size: 26px;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   text-decoration: underline;
   text-underline-offset: 6px;
   letter-spacing: -0.3px;
@@ -157,21 +167,45 @@ body{
 }
 
 .num{
-  color: var(--muted);
+  color: rgba(15,23,42,.5);
   margin-right: 6px;
 }
 
 .feature-body p{
   color: var(--muted);
-  margin-bottom: 14px;
-  max-width: 52ch;
+  margin: 0 0 14px;
+  max-width: 56ch;
 }
 
-/* UX polish note */
+/* UX polish helpers */
+.clarity{
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.clarity strong{
+  color: var(--text);
+}
+
+.bullets{
+  margin: 14px 0 16px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.bullets li{
+  margin: 8px 0;
+}
+
+.bullets strong{
+  color: var(--text);
+}
+
+/* PDF note */
 .pdf-note{
   font-size: 12px;
-  color: var(--muted);
-  margin-top: -6px;
+  color: rgba(15,23,42,.62);
+  margin-top: -4px;
   margin-bottom: 18px;
 }
 
@@ -185,30 +219,29 @@ body{
 
 .btn{
   padding: 12px 18px;
-  background: rgba(31,41,55,.55);
+  background: rgba(31,41,55,.72);
   color: white;
   border-radius: 12px;
   text-decoration: none;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .6px;
-  border: 1px solid rgba(31,41,55,.25);
+  border: 1px solid rgba(31,41,55,.18);
 }
 
-.btn:hover{
-  filter: brightness(1.05);
-}
+.btn:hover{ filter: brightness(1.06); }
 
 .link{
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid var(--border);
   padding-bottom: 2px;
+  font-size: 14px;
 }
 
 .link:hover{
-  border-bottom-color: var(--text);
+  border-bottom-color: rgba(15,23,42,.55);
 }
 
 /* About */
@@ -217,7 +250,8 @@ body{
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 24px;
-  max-width: 820px;
+  max-width: 860px;
+  box-shadow: var(--shadow);
 }
 
 .pill-row{
@@ -232,12 +266,12 @@ body{
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 13px;
-  background: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.35);
 }
 
 /* Footer */
 .footer{
-  margin-top: 60px;
+  margin-top: 64px;
   font-size: 13px;
   color: var(--muted);
 }
@@ -260,7 +294,7 @@ body{
   }
 
   .hero{
-    padding-top: 48px;
+    padding-top: 28px;
   }
 
   .feature-body h3{
