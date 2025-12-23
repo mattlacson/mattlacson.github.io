@@ -14,9 +14,10 @@
 
     <nav class="nav">
       <a href="#work">Work</a>
+      <a href="#publications">Publications</a>
       <a href="#about">About</a>
-      <a href="https://github.com/mattlacson" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      <a href="https://github.com/mattlacson" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:YOUR_EMAIL">Email</a>
     </nav>
   </header>
@@ -27,87 +28,86 @@
       <h1>Hello there, I’m Matthew.</h1>
 
       <p class="subhead">
-        A <strong>Computer Science major</strong> at UNLV interested in building clean,
-        practical software — from low-level systems work to polished web experiences.
+        A <strong>Computer Science major</strong> at UNLV who enjoys building clean, practical software —
+        and also cares about UI/UX, clarity, and usability.
       </p>
 
       <p class="meta">
         Currently focused on:
-        <span>C++</span> · <span>SQL</span> · <span>Git/GitHub</span> · <span>Computer Architecture</span>
+        <span>C++</span> · <span>SQL</span> · <span>Git/GitHub</span> · <span>Computer Architecture</span> · <span>UI/UX</span>
       </p>
     </section>
 
-    <!-- Work -->
+    <!-- WORK -->
     <section class="work" id="work">
       <div class="section-title">
         <h2>Work</h2>
-        <p>Selected projects (more on GitHub).</p>
+        <p>Selected projects (PDFs available).</p>
       </div>
 
-      <!-- Project 01 -->
+      <!-- Project 01: Overwatch UX/UI -->
       <article class="feature">
         <div class="feature-media">
-          <img src="images/project1.png" alt="MIPS Pipeline Project" />
+          <!-- Replace this with a real screenshot image when you have it -->
+          <img src="images/overwatch-preview.png" alt="Overwatch 2 UX/UI Project Preview" />
         </div>
 
         <div class="feature-body">
-          <h3><span class="num">01.</span> MIPS Pipeline / Datapath Notes + Practice</h3>
+          <h3><span class="num">01.</span> Overwatch 2 UX/UI Case Study</h3>
           <p>
-            A structured study resource with diagrams and explanations of hazards,
-            forwarding, CPI, and instruction flow. Built to make architecture concepts
-            easier to review and understand.
+            UX/UI redesign exploring interface clarity, game flow improvements, and accessibility
+            considerations. Includes process work, mockups, and usability insights.
           </p>
+          <p class="pdf-note">PDF · UX/UI case study</p>
 
           <div class="feature-actions">
-            <a class="btn" href="https://github.com/mattlacson/REPO1" target="_blank">View Project</a>
-            <a class="link" href="https://github.com/mattlacson/REPO1" target="_blank">GitHub →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 02 -->
-      <article class="feature reverse">
-        <div class="feature-media">
-          <img src="images/project2.png" alt="SQL Stored Procedures Project" />
-        </div>
-
-        <div class="feature-body">
-          <h3><span class="num">02.</span> SQL Stored Procedures Practice Set</h3>
-          <p>
-            A collection of stored procedures, transactions, and cursor patterns written
-            to match class syntax rules. Focused on correctness, clarity, and consistency.
-          </p>
-
-          <div class="feature-actions">
-            <a class="btn" href="https://github.com/mattlacson/REPO2" target="_blank">View Project</a>
-            <a class="link" href="https://github.com/mattlacson/REPO2" target="_blank">GitHub →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 03 -->
-      <article class="feature">
-        <div class="feature-media">
-          <img src="images/project3.png" alt="C++ Debugging Examples" />
-        </div>
-
-        <div class="feature-body">
-          <h3><span class="num">03.</span> C++ Debugging / Code Help Examples</h3>
-          <p>
-            Small C++ programs and debugging notes showing how I approach bugs,
-            edge cases, and performance improvements.
-          </p>
-
-          <div class="feature-actions">
-            <a class="btn" href="https://github.com/mattlacson/REPO3" target="_blank">View Project</a>
-            <a class="link" href="https://github.com/mattlacson/REPO3" target="_blank">GitHub →</a>
+            <a class="btn" href="overwatch-ux-ui.pdf" target="_blank" rel="noopener">
+              View Case Study (PDF)
+            </a>
+            <a class="link" href="overwatch-ux-ui.pdf" download>
+              Download PDF →
+            </a>
           </div>
         </div>
       </article>
     </section>
 
-    <!-- About -->
-    <section class="about">
+    <!-- PUBLICATIONS -->
+    <section class="work" id="publications">
+      <div class="section-title">
+        <h2>Publications</h2>
+        <p>Writing & independent projects.</p>
+      </div>
+
+      <!-- Publication 01: eBook -->
+      <article class="feature reverse">
+        <div class="feature-media">
+          <!-- Replace this with your real ebook cover image -->
+          <img src="images/ebook-cover.png" alt="Earn Smarter with AI eBook cover" />
+        </div>
+
+        <div class="feature-body">
+          <h3><span class="num">01.</span> Earn Smarter with AI (eBook)</h3>
+          <p>
+            A practical guide to starting AI-powered side hustles, including a 7-day action plan and
+            frameworks for consistency and growth.
+          </p>
+          <p class="pdf-note">PDF · eBook / guide</p>
+
+          <div class="feature-actions">
+            <a class="btn" href="earn-smarter-with-ai.pdf" target="_blank" rel="noopener">
+              Read eBook (PDF)
+            </a>
+            <a class="link" href="earn-smarter-with-ai.pdf" download>
+              Download →
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" aria-label="About section">
       <div class="section-title">
         <h2>About</h2>
         <p>A bit more context.</p>
@@ -115,9 +115,10 @@
 
       <div class="about-box">
         <p>
-          I enjoy understanding how systems work under the hood while also caring
-          about clarity, structure, and usability. I’m always looking to improve my
-          fundamentals and build projects that feel solid and intentional.
+          I’m a CS major who likes both the “how it works” side (architecture, systems, debugging)
+          and the “how it feels” side (clear UI, good UX, clean writing). I’m currently building more
+          portfolio-worthy projects and looking for opportunities to grow through internships, freelance
+          work, or collaboration.
         </p>
 
         <div class="pill-row">
@@ -125,6 +126,7 @@
           <span class="pill">Python</span>
           <span class="pill">SQL</span>
           <span class="pill">Git/GitHub</span>
+          <span class="pill">UI/UX</span>
           <span class="pill">MIPS / Architecture</span>
         </div>
       </div>
