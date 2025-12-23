@@ -38,12 +38,14 @@ body{
 .nav{
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
 }
 
 .nav a{
   color: var(--muted);
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
 }
 
 .nav a:hover{
@@ -68,6 +70,7 @@ body{
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   font-size: clamp(42px, 5vw, 62px);
   margin-bottom: 18px;
+  letter-spacing: -0.6px;
 }
 
 .subhead{
@@ -85,16 +88,23 @@ body{
   color: var(--muted);
 }
 
+.meta span{
+  color: var(--text);
+  opacity: .8;
+}
+
 /* Section titles */
 .section-title{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin: 44px 0 18px;
 }
 
 .section-title h2{
   font-size: 18px;
+  letter-spacing: .2px;
 }
 
 .section-title p{
@@ -125,19 +135,25 @@ body{
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 26px;
+  overflow: hidden;
 }
 
 .feature-media img{
   width: 100%;
+  height: auto;
+  display: block;
   border-radius: 12px;
 }
 
+/* Text side */
 .feature-body h3{
   font-family: ui-serif, Georgia, serif;
   font-size: 26px;
   margin-bottom: 12px;
   text-decoration: underline;
   text-underline-offset: 6px;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
 }
 
 .num{
@@ -147,14 +163,24 @@ body{
 
 .feature-body p{
   color: var(--muted);
-  margin-bottom: 18px;
-  max-width: 48ch;
+  margin-bottom: 14px;
+  max-width: 52ch;
 }
 
+/* UX polish note */
+.pdf-note{
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: -6px;
+  margin-bottom: 18px;
+}
+
+/* Buttons */
 .feature-actions{
   display: flex;
   gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn{
@@ -166,12 +192,23 @@ body{
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: .6px;
+  border: 1px solid rgba(31,41,55,.25);
+}
+
+.btn:hover{
+  filter: brightness(1.05);
 }
 
 .link{
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.link:hover{
+  border-bottom-color: var(--text);
 }
 
 /* About */
@@ -195,6 +232,7 @@ body{
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 13px;
+  background: rgba(255,255,255,.25);
 }
 
 /* Footer */
@@ -206,8 +244,26 @@ body{
 
 /* Responsive */
 @media (max-width: 900px){
+  .section-title{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .feature,
   .feature.reverse{
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .feature.reverse .feature-media{
+    order: 0;
+  }
+
+  .hero{
+    padding-top: 48px;
+  }
+
+  .feature-body h3{
+    font-size: 22px;
   }
 }
