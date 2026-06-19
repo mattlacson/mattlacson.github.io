@@ -293,41 +293,6 @@ body{
 }
 
 
-.coach-placeholder {
-  height: 260px;
-  border-radius: 12px;
-  background:
-    radial-gradient(circle at top left, rgba(124, 92, 255, .45), transparent 34%),
-    linear-gradient(135deg, #111827, #1f2937);
-  color: #f8fafc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 28px;
-}
-
-.coach-placeholder div {
-  display: grid;
-  gap: 10px;
-}
-
-.coach-placeholder strong {
-  font-family: ui-serif, Georgia, "Times New Roman", serif;
-  font-size: 30px;
-  line-height: 1.1;
-  letter-spacing: -0.4px;
-}
-
-.placeholder-small {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: rgba(248, 250, 252, .72);
-}
-
-
-
 /* Responsive */
 @media (max-width: 900px){
   .section-title{
